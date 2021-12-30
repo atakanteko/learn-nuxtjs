@@ -4,22 +4,20 @@
       <h1>Get the latest tech news!</h1>
     </section>
     <section class="featured-posts">
-      <nuxt-link :to="`/posts/${1}`" class="post-preview">
-        <article>
-          <div class="post-thumbnail" />
-          <div class="post-content">
-            <h1>Post Title</h1>
-            <p>Preview Text</p>
-          </div>
-        </article>
-      </nuxt-link>
+      <PostPreview id="1" title="First Title" preview-text="First Preview" thumbnail="" />
+      <PostPreview id="2" title="First Title 2" preview-text="Preview 2" thumbnail="" />
+      <PostPreview id="3" title="First Title 3" preview-text="Preview 3" thumbnail="" />
     </section>
   </div>
 </template>
 
 <script>
-export default {
+import PostPreview from '../components/PostPreview'
 
+export default {
+  components: {
+    PostPreview
+  }
 }
 </script>
 
@@ -61,42 +59,5 @@ export default {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
-
-.post-preview {
-  border: 1px solid #ccc;
-  box-shadow: 0 2px 2px #ccc;
-  background-color: white;
-  width: 90%;
-}
-
-a {
-  text-decoration: none;
-  color: black;
-}
-
-@media (min-width: 850px) {
-  .post-preview {
-    width: 400px;
-    margin: 10px;
-  }
-}
-
-.post-thumbnail {
-  background-image: url('https://images.hindustantimes.com/rf/image_size_630x354/HT/p2/2020/07/06/Pictures/_efc67d54-bf62-11ea-9738-294dc8afd766.jpg');
-  width: 100%;
-  height: 200px;
-  background-position: center;
-  background-size: cover;
-}
-
-.post-content {
-  padding: 10px;
-  text-align: center;
-}
-
-a:hover .post-content,
-a:active .post-content {
-  background-color: #ccc;
 }
 </style>
