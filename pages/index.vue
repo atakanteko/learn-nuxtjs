@@ -23,6 +23,7 @@ export default {
 
 <style scoped>
 .intro {
+  background-image: url('~assets/images/main-page-background.jpg');
   height: 300px;
   position: relative;
   padding: 30px;

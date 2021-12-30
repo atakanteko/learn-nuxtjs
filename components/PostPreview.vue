@@ -3,7 +3,6 @@
     <article>
       <div
         class="post-thumbnail"
-        :style="{ backgroundImage: 'url(' + thumbnail +')' }"
       />
       <div class="post-content">
         <h1>{{ title }}</h1>
@@ -62,6 +61,7 @@ a {
   height: 200px;
   background-position: center;
   background-size: cover;
+  background-color: grey;
 }
 
 .post-content {
